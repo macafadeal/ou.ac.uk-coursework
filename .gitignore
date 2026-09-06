@@ -1,217 +1,108 @@
-# ============================================================================
-# .gitignore - Comprehensive Development Environment
-# ============================================================================
-# Covers: Node.js, Yarn, ESLint, Python, Jupyter Notebooks, and IDE configs
-# ============================================================================
+# ==============================================================================
+# The Open University (ou.ac.uk) Coursework .gitignore
+# Computing & IT (Networking Focus)
+# ==============================================================================
 
-# ============================================================================
-# 1. NODE.JS & NPM
-# ============================================================================
-
-# Dependencies
-node_modules/
-package-lock.json
-npm-debug.log*
-npm-error.log*
-yarn-error.log*
-lerna-debug.log*
-
-# NPM package lock variations
-.npm
-.eslintcache
-
-# Optional npm cache directory
-.npm/
-
-# Optional eslint cache
-.eslintcache
-
-# Bundles produced by bundlers
-dist/
-build/
-
-# ============================================================================
-# 2. YARN
-# ============================================================================
-
-# Yarn package manager
-yarn.lock
-.yarn/cache
-.yarn/install-state.gz
-.yarn/build-state.yml
-.yarn/unplugged/
-
-# Yarn Berry (modern Yarn) specific
-.yarn
-!.yarn/cache
-!.yarn/releases
-!.yarn/plugins
-!.yarn/sdks
-!.yarn/versions
-
-# ============================================================================
-# 3. ESLINT
-# ============================================================================
-
-.eslintcache
-.eslintignore
-
-# ============================================================================
-# 4. PYTHON
-# ============================================================================
-
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
-
-# C extensions
-*.so
-
-# Distribution / packaging
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-pip-wheel-metadata/
-share/python-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
-
-# PyInstaller
-*.manifest
-*.spec
-
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
-
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.nox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-*.py,cover
-.hypothesis/
-.pytest_cache/
-
-# Translations
-*.mo
-*.pot
-
-# Django stuff:
-*.log
-local_settings.py
-db.sqlite3
-db.sqlite3-journal
-
-# Flask stuff:
-instance/
-.webassets-cache
-
-# Scrapy stuff:
-.scrapy
-
-# Sphinx documentation
-docs/_build/
-
-# PyBuilder
-target/
-
-# Jupyter Notebook
-# .ipynb_checkpoints/
-# *.ipynb
-
-# IPython
-profile_default/
-ipython_config.py
-
-# pyenv
-.python-version
-
-# pipenv
-Pipfile.lock
-
-# PEP 582
-__pypackages__/
-
-# Celery stuff
-celerybeat-schedule
-celerybeat.pid
-
-# SageMath parsed files
-*.sage.py
-
-# Environments
-.env
-.venv
-env/
+# ------------------------------------------------------------------------------
+# 1. Python & Jupyter Notebooks (TM112 & General Scripting)
+# ------------------------------------------------------------------------------
+# Virtual environments
+.venv/
 venv/
+env/
 ENV/
 env.bak/
 venv.bak/
 
-# Spyder project settings
-.spyderproject
-.spyproject
-
-# Rope project settings
-.ropeproject
-
-# mkdocs documentation
-/site
-
-# mypy
+# Byte-compiled / optimized files & cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
 .mypy_cache/
-.dmypy.json
-dmypy.json
 
-# Pyre type checker
-.pyre/
-
-# ============================================================================
-# 5. JUPYTER NOTEBOOKS
-# ============================================================================
-
-# Jupyter Notebook checkpoints
+# Jupyter Notebook checkpoints & runtime settings
+# NOTE: *.ipynb files are tracked coursework; only ignore checkpoints and cache
 .ipynb_checkpoints/
-
-# Jupyter Lab
-.jupyterlab-settings/
 .jupyter/
-
-# IPython
-profile_default/
+.jupyterlab-settings/
 ipython_config.py
+profile_default/
 
-# ============================================================================
-# 6. EDITOR & IDE CONFIGURATION
-# ============================================================================
+# Python packaging & distribution (if building local packages)
+build/
+dist/
+*.egg-info/
+*.egg
 
+# ------------------------------------------------------------------------------
+# 2. Coursework & Office Documents (TMA submissions & reports)
+# ------------------------------------------------------------------------------
+# Microsoft Office lock/temporary files created when editing .docx/.xlsx/.pptx
+~$*.doc*
+~$*.xls*
+~$*.ppt*
+
+# LibreOffice lock files
+.~lock.*#
+
+# ------------------------------------------------------------------------------
+# 3. Web Technologies & Node.js (TM252 & Web Lab Tools)
+# ------------------------------------------------------------------------------
+node_modules/
+.npm/
+.eslintcache
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ------------------------------------------------------------------------------
+# 4. Networking & Virtual Labs (TM129 & Networking Modules)
+# ------------------------------------------------------------------------------
+# VM runtime locks and memory dumps (VirtualBox / VMware)
+*.vmem
+*.vmsn
+*.nvram
+*.lck
+
+# ------------------------------------------------------------------------------
+# 5. Environment Variables & Secrets (API Keys, OpenCelliD, etc.)
+# ------------------------------------------------------------------------------
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+credentials.json
+
+# ------------------------------------------------------------------------------
+# 6. Operating System Files
+# ------------------------------------------------------------------------------
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+.directory
+
+# ------------------------------------------------------------------------------
+# 7. Editors & IDEs
+# ------------------------------------------------------------------------------
 # VS Code
 .vscode/
 *.code-workspace
 .history/
 
-# JetBrains IDEs
+# JetBrains (PyCharm, IntelliJ, WebStorm)
 .idea/
-.idea_modules/
 *.iml
 *.iws
 *.ipr
@@ -220,103 +111,17 @@ ipython_config.py
 *.sublime-project
 *.sublime-workspace
 
-# Vim
-*~
-.swp
-.swo
+# Vim / Emacs swap & backup files
 *.swp
 *.swo
-.vim/
-
-# Emacs
 *~
 \#*\#
 .\#*
 
-# macOS
-.DS_Store
-.AppleDouble
-.LSOverride
-
-# ============================================================================
-# 7. OS & SYSTEM FILES
-# ============================================================================
-
-# Windows
-Thumbs.db
-ehthumbs.db
-Desktop.ini
-
-# Linux
-.directory
-
-# ============================================================================
-# 8. ENVIRONMENT & SECRETS
-# ============================================================================
-
-# Environment variables
-.env
-.env.local
-.env.*.local
-
-# Secrets & credentials
-.aws/
-.ssh/
-*.pem
-*.key
-.tokens
-
-# ============================================================================
-# 9. BUILD & TEMPORARY FILES
-# ============================================================================
-
-# Build outputs
-dist/
-build/
-*.tar.gz
-*.zip
-
-# Temporary files
+# ------------------------------------------------------------------------------
+# 8. Temporary & Backup Files
+# ------------------------------------------------------------------------------
 *.tmp
 *.temp
 *.bak
-*.swp
-*~
-
-# ============================================================================
-# 10. DEPENDENCIES & LOCK FILES (Optional - uncomment if needed)
-# ============================================================================
-
-# If you want to ignore lock files (not recommended for production)
-# package-lock.json
-# yarn.lock
-# Pipfile.lock
-
-# ============================================================================
-# 11. SPECIAL DIRECTORIES (Uncomment as needed)
-# ============================================================================
-
-# Ignore entire directories
-# /vendor/
-# /tmp/
-# /temp/
-
-# ============================================================================
-# 12. FILE PATTERNS (Uncomment as needed)
-# ============================================================================
-
-# Ignore all .log files
-# *.log
-
-# Ignore all .tmp files
-# *.tmp
-
-# ============================================================================
-# NOTES
-# ============================================================================
-# - Keep lock files (package-lock.json, yarn.lock, Pipfile.lock) in git
-#   for reproducible builds
-# - Only add /.env if it contains no secrets
-# - Use .env.example for template environment files
-# - Consider .gitignore_global for personal IDE configs
-# ============================================================================
+*.log

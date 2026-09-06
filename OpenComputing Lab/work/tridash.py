@@ -1,9 +1,12 @@
-from ipywidgets import interact, widgets
-from matplotlib.patches import Polygon
-import localization as lx
+# tridash.py
+import localization as lx  # type: ignore[import-untyped]
 
 # Configure the notebooks to display plots inline and import some plotting tools
 import matplotlib.pyplot as plt
+
+# tridash.py
+from ipywidgets import interact, widgets  # type: ignore[import-untyped]
+from matplotlib.patches import Polygon
 
 points = widgets.Textarea()
 
@@ -112,13 +115,9 @@ def f(
 
     plotCircles(c1, c2, c3, centre, area)
 
-    centretxt = (
-        "" if not centre else "Midpoint: {:.2f} {:.2f}".format(centre[0], centre[1])
-    )
-    points.value = """
-    Circle 1: centre {}, radius {}
-    Circle 2: centre {}, radius {}
-    Circle 3: centre {}, radius {}
-    {}""".format(
-        (x1, y1), r1, (x2, y2), r2, (x3, y3), r3, centretxt
-    )
+    centretxt = "" if not centre else f"Midpoint: {centre[0]:.2f} {centre[1]:.2f}"
+    points.value = f"""
+    Circle 1: centre {(x1, y1)}, radius {r1}
+    Circle 2: centre {(x2, y2)}, radius {r2}
+    Circle 3: centre {(x3, y3)}, radius {r3}
+    {centretxt}"""
