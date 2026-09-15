@@ -1,0 +1,13 @@
+{
+  "name": "tma02",
+  "version": "25.0.0",
+  "description": "TMA02 Practical Work",
+  "scripts": {
+    "dev-server": "node server.js"
+  },
+  "author": "Mark Hall <mark.hall@open.ac.uk>",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

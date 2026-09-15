@@ -1,0 +1,4 @@
+const SPEED_LIMIT = 299792458;
+console.log(SPEED_LIMIT);
+
+SPEED_LIMIT = 70;

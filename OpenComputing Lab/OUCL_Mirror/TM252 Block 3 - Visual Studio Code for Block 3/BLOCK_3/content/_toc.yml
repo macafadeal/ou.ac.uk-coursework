@@ -1,0 +1,53 @@
+format: jb-book
+root: index
+parts:
+  - caption: "Week 19 - Architecture, Application and Languages"
+    chapters:
+      - file: Basics/basicoverview
+        title: "The Python Language"
+      - file: Basics/commenting
+        title: "Commenting in Python"
+      - file: Basics/variables
+        title: "Python Variables"
+      - file: Basics/datastructures
+        title: "Python Data Structures"
+      - file: Basics/conditionals
+        title: "Python Conditionals"
+      - file: Basics/iteration
+        title: "Iteration in Python"
+      - file: Web_Server/overview
+        title: "Web server overview"
+      - file: Web_Server/simple_server
+        title: "A Simple Python Web Server"
+      - file: Extras/week_19_extras
+        title: "Week 19 - Further Exploration"
+  - caption: "Week 20 - Advanced Web Applications in Python"
+    chapters:
+      - file: Web_Frameworks/Frameworks
+        title: "Introduction to Web Frameworks"
+      - file: Web_Frameworks/Flask_Init
+        title: "An introduction to Flask"
+      - file: Web_Server/pidecho
+        title: "Implementing an Echo Server"
+      - file: Web_Server/parameter_handling
+        title: "Handling Parameters"
+      - file: Complex_Data/complex_data
+        title: "Request Handling (GET and POST)"
+      - file: Complex_Data/json
+        title: "Handling Complex Data with JSON"
+      - file: Complex_Data/sessions
+        title: "Session Handling"
+      - file: Persistence/persistent_data_storage
+        title: "Persistent Data Storage"
+      - file: Services/overview
+        title: "Web Services"
+      - file: Services/simple_rest
+        title: "Building a RESTful Service"
+      - file: Extras/week_20_extras
+        title: "Week 20 - Further Exploration"
+  - caption: "Miscellaneous"
+    chapters:
+      - file: errata
+        title: "Errata"
+      - file: accessibility-statement
+        title: "Accessibility Statement"

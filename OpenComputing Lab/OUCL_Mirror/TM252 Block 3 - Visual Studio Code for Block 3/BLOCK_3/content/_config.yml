@@ -1,0 +1,28 @@
+title: TM252 - Block 3 Activities
+author: TM252 Module Team
+copyright: Open University
+only_build_toc_files: true
+
+latex:
+  latex_documents:
+    targetname: tm352_block3.tex
+
+bibtex_bibfiles:
+  - references.bib
+
+repository:
+  url:
+  path_to_book:
+  branch:
+
+html:
+  use_issues_button: false
+  use_repository_button: false
+
+sphinx:
+  extra_extensions:
+    - ou_book_theme
+    - sphinxcontrib.mermaid
+  config:
+    bibtex_reference_style: author_year
+    html_theme: ou_book_theme

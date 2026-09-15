@@ -1,0 +1,16 @@
+{
+  "name": "tma02",
+  "version": "25.0.0",
+  "description": "TMA02 Practical Work",
+  "scripts": {
+    "dev-server": "node server.js",
+    "test": "npx playwright install chromium && npx playwright test"
+  },
+  "author": "Mark Hall <mark.hall@open.ac.uk>",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "dependencies": {
+    "@playwright/test": "^1.49.1",
+    "express": "^4.21.2",
+    "multer": "^1.4.5-lts.2"
+  }
+}
